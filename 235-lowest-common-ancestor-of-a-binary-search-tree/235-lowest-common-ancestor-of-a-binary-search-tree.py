@@ -18,6 +18,9 @@ class Solution:
                 return 
             if  small <= root.val <= big :
                 return root
-            return  ch(root.left) or ch(root.right)
+            if root.val < small:
+                return ch(root.right)
+            if root.val > small:  
+                return  ch(root.left) 
         
         return ch(root)
