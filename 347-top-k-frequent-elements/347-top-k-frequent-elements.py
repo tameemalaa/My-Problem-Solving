@@ -6,4 +6,4 @@ class Solution:
             l[j].append(i)
         a = list(chain(*l))
         print(a)
-        return a[len(a)-k:]
+        return a[-k:]
