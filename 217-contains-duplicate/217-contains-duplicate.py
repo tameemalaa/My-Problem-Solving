@@ -1,12 +1,9 @@
-from collections import Counter 
-class Solution(object):
-    def containsDuplicate(self, nums):
-        """
-        :type nums: List[int]
-        :rtype: bool
-        """
-        c = Counter(nums)
-        if len(nums) == len(c): return False 
-        else : return True
-        
-        
+class Solution:
+    def containsDuplicate(self, nums: List[int]) -> bool:
+        n = set()
+        for i in nums :
+            if i in n:
+                return True 
+            else :
+                n.add(i)
+        return False 
